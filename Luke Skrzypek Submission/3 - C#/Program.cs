@@ -1,0 +1,1 @@
+﻿using S=string;var F=(int n,char f,char i,S d)=>n<4?new S(f,n):n==4?$"{f}{i}":n<9?i+new S(f,n-5):d;File.ReadAllText(args[0]).Split('\n').ToList().ForEach(l=>{var n=int.Parse(l);Console.WriteLine($"{new S('M',n/1000)}{F(n/100%10,'C','D',"CM")}{F(n/10%10,'X','L',"XC")}{F(n%10,'I','V',"IX")}");});
